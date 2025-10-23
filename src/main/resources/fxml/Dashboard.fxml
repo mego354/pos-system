@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pos.controllers.DashboardController">
+   <content>
+      <VBox spacing="20.0" styleClass="dashboard-container">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Label styleClass="page-title" text="Dashboard" />
+            <GridPane hgap="20.0" vgap="20.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox styleClass="stat-card" GridPane.columnIndex="0">
+                     <children>
+                        <Label styleClass="stat-number" text="0" fx:id="totalProductsLabel" />
+                        <Label styleClass="stat-label" text="Total Products" />
+                     </children>
+                  </VBox>
+                  <VBox styleClass="stat-card" GridPane.columnIndex="1">
+                     <children>
+                        <Label styleClass="stat-number" text="0" fx:id="totalCategoriesLabel" />
+                        <Label styleClass="stat-label" text="Total Categories" />
+                     </children>
+                  </VBox>
+                  <VBox styleClass="stat-card" GridPane.columnIndex="2">
+                     <children>
+                        <Label styleClass="stat-number" text="0" fx:id="totalSalesLabel" />
+                        <Label styleClass="stat-label" text="Total Sales" />
+                     </children>
+                  </VBox>
+                  <VBox styleClass="stat-card" GridPane.columnIndex="3">
+                     <children>
+                        <Label styleClass="stat-number" text="$0.00" fx:id="totalRevenueLabel" />
+                        <Label styleClass="stat-label" text="Total Revenue" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <HBox spacing="20.0">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="chart-title" text="Recent Sales" />
+                        <TableView fx:id="recentSalesTable" styleClass="data-table">
+                           <columns>
+                              <TableColumn fx:id="saleIdColumn" text="Sale ID" />
+                              <TableColumn fx:id="amountColumn" text="Amount" />
+                              <TableColumn fx:id="dateColumn" text="Date" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

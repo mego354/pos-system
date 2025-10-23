@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pos.controllers.CategoryController">
+   <content>
+      <VBox spacing="20.0" styleClass="page-container">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <Label styleClass="page-title" text="Categories" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="addCategoryBtn" styleClass="primary-button" text="Add Category" />
+                  <Button fx:id="editCategoryBtn" styleClass="secondary-button" text="Edit" />
+                  <Button fx:id="deleteCategoryBtn" styleClass="danger-button" text="Delete" />
+                  <Button fx:id="refreshBtn" styleClass="secondary-button" text="Refresh" />
+               </children>
+            </HBox>
+            <TableView fx:id="categoriesTable" styleClass="data-table">
+               <columns>
+                  <TableColumn fx:id="idColumn" text="ID" />
+                  <TableColumn fx:id="nameColumn" text="Name" />
+                  <TableColumn fx:id="descriptionColumn" text="Description" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

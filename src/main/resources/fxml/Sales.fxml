@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pos.controllers.SalesController">
+   <content>
+      <VBox spacing="20.0" styleClass="page-container">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Label styleClass="page-title" text="Sales" />
+            <HBox spacing="20.0">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS" spacing="15.0">
+                     <children>
+                        <Label styleClass="section-title" text="Products" />
+                        <HBox spacing="10.0">
+                           <children>
+                              <TextField fx:id="searchField" promptText="Search products..." styleClass="search-field" />
+                              <Button fx:id="searchBtn" styleClass="secondary-button" text="Search" />
+                           </children>
+                        </HBox>
+                        <ComboBox fx:id="categoryFilter" promptText="Filter by category" styleClass="filter-combo" />
+                        <TableView fx:id="productsTable" styleClass="data-table">
+                           <columns>
+                              <TableColumn fx:id="productNameColumn" text="Name" />
+                              <TableColumn fx:id="productCategoryColumn" text="Category" />
+                              <TableColumn fx:id="productPriceColumn" text="Price" />
+                              <TableColumn fx:id="productStockColumn" text="Stock" />
+                              <TableColumn fx:id="addToCartColumn" text="Action" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox spacing="15.0" styleClass="cart-section">
+                     <children>
+                        <Label styleClass="section-title" text="Shopping Cart" />
+                        <TableView fx:id="cartTable" styleClass="data-table">
+                           <columns>
+                              <TableColumn fx:id="cartProductColumn" text="Product" />
+                              <TableColumn fx:id="cartQuantityColumn" text="Qty" />
+                              <TableColumn fx:id="cartPriceColumn" text="Price" />
+                              <TableColumn fx:id="cartSubtotalColumn" text="Subtotal" />
+                              <TableColumn fx:id="removeFromCartColumn" text="Remove" />
+                           </columns>
+                        </TableView>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label styleClass="total-label" text="Total:" />
+                              <Label fx:id="totalLabel" styleClass="total-amount" text="$0.00" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="processSaleBtn" maxWidth="1.7976931348623157E308" styleClass="success-button" text="Process Sale" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
