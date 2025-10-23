@@ -145,10 +145,6 @@ Database file: `pos_system.db`
 ### Database errors?
 - Delete `pos_system.db` - it will recreate with sample data
 
-### Need help?
-- Check `FEATURES_COMPLETE.md` for full feature list
-- All features are tested and working!
-
 ---
 
 ## 📁 Project Files
@@ -160,7 +156,6 @@ Java POS/
 ├── sqlite-jdbc.jar        # Auto-downloaded
 ├── pos_system.db          # Your database
 ├── README.md              # This file
-└── FEATURES_COMPLETE.md   # Full feature list
 ```
 
 ---
